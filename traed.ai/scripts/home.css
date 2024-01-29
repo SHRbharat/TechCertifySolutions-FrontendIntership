@@ -15,12 +15,13 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 .container {
-  height: 100%;
+  height: fit-content;
   width: 100%;
-  overflow-x: hidden;
+  /* overflow: hidden; */
 }
 
 .header {
@@ -174,7 +175,7 @@ a {
   }
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 540px) {
   .header {
     height: 8rem;
     padding: 2rem 1rem;
@@ -184,154 +185,898 @@ a {
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~landing-section styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-.landing-section{
-    width:100%;
-    height: calc(100vh - 10rem);
-    background: linear-gradient(270deg, rgba(238, 238, 238, 0.00) 14.47%, #EEE 91.58%), url("../assets/backgroundLarge.jfif"), lightgray 50% ;
-    background-repeat: no-repeat;
+.landing-section {
+  width: 100%;
+  height: calc(100vh - 10rem);
+
+  background: linear-gradient(
+      270deg,
+      rgba(238, 238, 238, 0) 14.47%,
+      #eee 91.58%
+    ),
+    url("../assets/backgroundLarge.jfif"), lightgray;
+
+  background-position: 50% 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-section .container {
+  height: 80%;
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.landing-section .heading-large {
+  font-size: 7rem;
+  font-weight: 700;
+  width: 60%;
+  color: var(--Main-Primary);
+}
+
+.landing-section .heading-small {
+  font-size: 1.6rem;
+  font-weight: 400;
+  width: 60%;
+  color: var(--Secondary);
+}
+
+.landing-section .button-container {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  width: 60%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+}
+
+.landing-section .primary-button {
+  width: 18rem;
+  display: flex;
+  padding: 1.4rem 1.8rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+
+  border-radius: 0.6rem;
+  border: none;
+  background: var(--Highlight-Primary);
+  color: var(--White);
+  cursor: pointer;
+}
+
+.landing-section .secondary-button {
+  display: flex;
+  padding: 1.4rem 1.8rem;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 0.6rem;
+  border: none;
+  background: transparent;
+  color: var(--Secondary);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .landing-section .container {
+    height: 90%;
+    width: 90%;
+  }
+
+  .landing-section .heading-large,
+  .landing-section .heading-small,
+  .landing-section .button-container {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .landing-section {
+    height: calc(100vh-8rem);
+    background: linear-gradient(
+        270deg,
+        rgba(238, 238, 238, 0) 14.47%,
+        #eee 91.58%
+      ),
+      url("../assets/backgroundLarge.jfif"),
+      lightgray -686.557px 1.526px / 203.093% 100% no-repeat;
     background-size: cover;
+    background-position: right center;
+  }
 
-    display: flex;
-    justify-content: center;
+  .landing-section .container {
+    width: 90%;
+    gap: 4rem;
+  }
+
+  .landing-section .heading-large,
+  .landing-section .heading-small,
+  .landing-section .button-container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .landing-section {
+    height: calc(100vh-8rem);
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.2) 100%
+      ),
+      url("../assets/backgroundLarge.jfif"),
+      lightgray -904.39px 0px / 346.82% 100% no-repeat;
+    background-size: cover;
+    background-position: right center;
+  }
+
+  .landing-section .container {
+    width: 98%;
+    gap: 2rem;
     align-items: center;
-}
+  }
 
-.landing-section .container{
-    height:80%;
-    width:80%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap:2rem;
-}
-
-.landing-section .heading-large{
-    font-size: 7rem;
-    font-weight: 700;
-    width: 60%;
-    color: var(--Main-Primary);
-}
-
-.landing-section .heading-small{
-    font-size: 1.6rem;
-    font-weight: 400;
-    width: 60%;
-    color: var(--Secondary);
-}
-
-.landing-section .button-container{
-    font-family: 'Inter',sans-serif;
-    font-size: 1.4rem;
-    font-weight: 600;
-    width: 60%;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap:3rem;
-}
-
-.landing-section .primary-button{
-    width: 18rem;
-    display: flex;
-    padding: 1.4rem 1.8rem;
-    justify-content: center;
-    align-items: center;
-    gap: 0.3rem;
-
-    border-radius: 0.6rem;
-    border: none;
-    background: var(--Highlight-Primary);
+  .landing-section .heading-large {
+    font-size: 4rem;
     color: var(--White);
-    cursor: pointer;
-}
+  }
 
-.landing-section .secondary-button{
-    display: flex;
-    padding: 1.4rem 1.8rem;
-    justify-content: center;
+  .landing-section .heading-small {
+    font-size: 1.4rem;
+    color: var(--White);
+  }
+
+  .landing-section .button-container {
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    gap: 1rem;
+  }
 
-    border-radius: 0.6rem;
-    border: none;
-    background: transparent;
+  .landing-section .primary-button {
+    width: 100%;
+  }
+
+  .landing-section .secondary-button {
+    width: 100%;
+    background-color: var(--White);
     color: var(--Secondary);
-    cursor: pointer;
-}
-
-@media only screen and (max-width: 1200px){
-    .landing-section .container{
-        height:90%;
-        width:90%;
-    }
-
-    .landing-section .heading-large,
-    .landing-section .heading-small,
-    .landing-section .button-container{
-        width:80%;
-    }
-}
-
-@media only screen and (max-width: 940px){
-    .landing-section{
-        height:calc(100vh-8rem);
-        background : linear-gradient(270deg, rgba(238, 238, 238, 0.00) 14.47%, #EEE 91.58%), url("../assets/backgroundLarge.jfif"), lightgray -686.557px 1.526px / 203.093% 100% no-repeat;
-    }
-
-    .landing-section .container{
-        width:90%;
-        gap:4rem;
-    }
-
-    .landing-section .heading-large,
-    .landing-section .heading-small,
-    .landing-section .button-container{
-        width:90%;
-    }
-}
-
-@media only screen and (max-width: 420px){
-    .landing-section{
-        height:calc(100vh-8rem);
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url("../assets/backgroundLarge.jfif"), lightgray -904.39px 0px / 346.82% 100% no-repeat;
-    }
-
-    .landing-section .container{
-        width:98%;
-        gap:2rem;
-        align-items: center;
-    }
-
-    .landing-section .heading-large{
-        font-size: 4rem;
-        color: var(--White);
-    }
-
-    .landing-section .heading-small{
-        font-size: 1.4rem;
-        color: var(--White);
-    }
-
-    .landing-section .button-container{
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        gap:1rem;
-    }
-
-    .landing-section .primary-button{
-        width:100%;
-    }
-
-    .landing-section .secondary-button{
-        width:100%;
-        background-color: var(--White);
-        color: var(--Secondary);
-    }
+  }
 }
 
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~section-2 styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.section-2 {
+  height: 100vh;
+  width: 100%;
+  padding-top: 6rem;
+  background: var(--Main-Primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-2 .container {
+  padding: 2rem;
+  height: 100%;
+  width: 80%;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-2 .heading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.section-2 .header-large {
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--White);
+  width: 50%;
+}
+
+.section-2 .heading-container p {
+  text-align: center;
+}
+
+.section-2 .header-small {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--Secondary);
+  width: 70%;
+}
+
+.section-2 .cards-container {
+  width: 100%;
+  max-height: 65%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.section-2 .card1 {
+  grid-area: 1/1/2/2;
+}
+.section-2 .card2 {
+  grid-area: 2/1/3/2;
+}
+.section-2 .cards-master {
+  grid-area: 1/2/3/3;
+}
+.section-2 .card3 {
+  grid-area: 1/3/2/4;
+}
+.section-2 .card-4 {
+  grid-area: 2/3/3/4;
+}
+
+.section-2 .cards-master {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 2.5rem;
+  border: none;
+
+  background: url("../assets/masterCard-Background.png");
+  background-position: bottom center;
+  background-size: cover;
+  color: var(--Secondary);
+  gap: 2rem;
+  overflow: hidden;
+}
+
+/*smartphone design*/
+.phone-outer {
+  width: 27rem;
+  height: 50rem;
+  flex-shrink: 0;
+
+  border-radius: 4rem;
+  background: #1c1b2d;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-inner {
+  width: 25rem;
+  height: 48rem;
+  flex-shrink: 0;
+
+  border-radius: 3rem;
+  /* background: lightgray 0.42px -2.309px / 100% 118.07% no-repeat; */
+  background-color: lightgray;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.phone-island {
+  height: 1rem;
+  width: 4rem;
+  background-color: #23213b;
+  border-radius: 0.5rem;
+  position: relative;
+  top: 3px;
+  left: 43%;
+}
+/*end of smartphone design*/
+
+.section-2 .cards-master .phone-container {
+  position: relative;
+  bottom: -4rem;
+  right: -8rem;
+}
+
+.section-2 .cards-master .phone-inner {
+  background-image: url("../assets/smartphone.png");
+}
+
+/*card styles*/
+.section-2 .card {
+  border-radius: 2rem;
+  background: rgba(126, 134, 147, 0.1);
+  padding: 2rem;
+
+  color: var(--White);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.section-2 .card .card-heading,
+.section-2 .cards-master .card-heading {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.section-2 .card .card-content,
+.section-2 .cards-master .card-content {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.section-2 .card .card-content p,
+.section-2 .cards-master .card-content p {
+  text-align: left;
+}
+
+.section-2 .card .img-container {
+  height: 6rem;
+  width: 6rem;
+  background-color: var(--Highlight-Primary);
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-2 .card img {
+  height: 70%;
+  width: 80%;
+}
+/*end of card styles*/
+
+@media only screen and (max-width: 1260px) {
+  .section-2 .container {
+    width: 95%;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .section-2 .header-large {
+    width: 80%;
+  }
+
+  .section-2 .header-small {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+}
+
+@media only screen and (max-width: 540px) {
+}
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~about section styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.about-section {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--Main-Primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+.about-section .container {
+  width: 90%;
+  height: 90%;
+  padding: 5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-section .left-panel {
+  height: 50vh;
+  width: 40%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--White);
+  gap: 4rem;
+}
+
+.about-section h1 {
+  font-size: 8rem;
+  font-weight: 500;
+}
+
+.about-section p {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.about-section .right-panel {
+  height: 50vh;
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section img {
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1260px) {
+}
+
+@media only screen and (max-width: 940px) {
+}
+
+@media only screen and (max-width: 540px) {
+}
+
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~dual-phones section styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.dual-phones-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: var(--Main-Primary);
+}
+
+.dual-phones-section .container {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.dual-phones-section .left-panel {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dual-phones-section .phone-back {
+  z-index: 10;
+  transform: rotate(-3deg);
+}
+.dual-phones-section .phone-front {
+  z-index: 20;
+  transform: rotate(5deg) translate(-8rem, 4rem);
+}
+
+.dual-phones-section .phone-back .phone-inner {
+  background-image: url("../assets/smartphoneBack.png");
+}
+
+.dual-phones-section .phone-front .phone-inner {
+  background-image: url("../assets/smartphoneFront.png");
+}
+
+.dual-phones-section .right-panel {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  color: var(--White);
+  gap: 3rem;
+}
+
+.dual-phones-section .right-panel h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.dual-phones-section .right-panel p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.dual-phones-section .points-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.points-container span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+}
+
+.points-container .img-container {
+  height: 6rem;
+  width: 6rem;
+  background-color: var(--Highlight-Primary);
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1260px) {
+}
+
+@media only screen and (max-width: 940px) {
+}
+
+@media only screen and (max-width: 540px) {
+}
+
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~content-section-v1 styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.content-section-v1 {
+  width: 100%;
+  height: 100vh;
+  background-color: #364548;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+.content-section-v1 .container {
+  width: 90%;
+  height: 90%;
+  padding: 5rem;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.content-section-v1 .left-panel {
+  height: 50vh;
+  width: 50%;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--White);
+  gap: 4rem;
+}
+
+.content-section-v1 h1 {
+  font-size: 6rem;
+  font-weight: 500;
+}
+
+.content-section-v1 p {
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+
+.content-section-v1 .primary-button {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: flex;
+  padding: 1.4rem 1.8rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+
+  width: 18rem;
+
+  border-radius: 0.6rem;
+  border: none;
+  background: var(--Highlight-Primary);
+  color: var(--White);
+  cursor: pointer;
+}
+
+.content-section-v1 .right-panel {
+  height: 50vh;
+  width: 40%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-section-v1 img {
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1260px) {
+}
+
+@media only screen and (max-width: 940px) {
+}
+
+@media only screen and (max-width: 540px) {
+}
+
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~accodrian-section styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.accordion-section {
+  background-color: var(--Main-Primary);
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  color: var(--White);
+}
+
+.accordion-section .container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion-section .heading {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+
+.accordion-section .heading h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.accordion-section .heading p {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+/*accordion styles*/
+.accordion {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.accordion .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+  width: 95%;
+
+  border: 2px solid var(--White);
+  border-radius: 1rem;
+}
+
+.accordion .label {
+  position: relative;
+  width: 90%;
+
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: left;
+  cursor: pointer;
+}
+
+.accordion .label::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+}
+
+/*hidden initialy with height = 0*/
+.accordion .content {
+  position: relative;
+  width: 90%;
+  height: 0;
+  font-size: 1.6rem;
+  font-weight: 200;
+  text-align: left;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.accordion ul {
+  padding-left: 2rem;
+}
+.accordion li {
+  list-style-type: disc;
+}
+
+.accordion .container.active .content {
+  height: 14rem;
+  padding-top: 1rem;
+}
+
+.accordion .container.active .label::before {
+  content: "x";
+}
+/*end of accordion styles*/
+
+@media only screen and (max-width: 1260px) {
+}
+
+@media only screen and (max-width: 940px) {
+}
+
+@media only screen and (max-width: 540px) {
+}
+
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~footer styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.footer {
+  height: fit-content;
+  width: 100%;
+  background-color: var(--Main-Primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .container-top {
+  width: 80%;
+  padding: 10rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 30rem;
+}
+
+.footer .left-panel {
+  width: 30%;
+  color: var(--White);
+  font-size: 1.8rem;
+  font-weight: 400;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.footer .left-panel img {
+  height: 4rem;
+  width: 9rem;
+}
+
+.footer .left-panel .social-icon-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer .left-panel .social-icon-wrapper i {
+  font-size: 3.5rem;
+  color: rgb(45, 48, 52);
+  /* --fa-inverse : #fff;
+  --fa-border-color : #fff; */
+}
+
+.footer .left-panel .social-icon-wrapper i:hover {
+  color: var(--Primary-2);
+}
+
+.footer .right-panel {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5rem;
+  font-family: "Inter", sans-serif;
+}
+
+.footer .right-panel h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--White);
+}
+
+.footer .right-panel a {
+  font-size: 1.8rem;
+  font-weight: 200;
+  color: var(--Secondary);
+}
+
+.footer .right-panel a:hover {
+  color: var(--White);
+}
+
+.footer .links-left,
+.footer .links-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.footer .links-left span,
+.footer .links-right span {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.footer .horizontal-rule {
+  height: 0.1rem;
+  width: 100%;
+  background-color: var(--Secondary);
+}
+
+.footer .container-bottom {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--White);
+  font-family: "Inter", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.footer .container-bottom a {
+  color: #b4b9c9;
+  text-decoration: underline;
+}
+@media only screen and (max-width: 1260px) {
+}
+
+@media only screen and (max-width: 940px) {
+}
+
+@media only screen and (max-width: 540px) {
+}

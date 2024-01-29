@@ -8,3 +8,17 @@ function mobileMenu() {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
 }
+
+if(window.innerWidth <= 540){
+  document.querySelector(".main-section .secondary-button").innerHTML = "Learn more";
+}
+
+
+//accordian
+const accordion = document.querySelectorAll('.accordion-section .accordion .container');
+
+for (i=0; i<accordion.length; i++) {
+  accordion[i].addEventListener('click', function () {
+    this.classList.toggle('active')
+  })
+}
