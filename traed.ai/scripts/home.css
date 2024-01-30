@@ -570,53 +570,135 @@ a {
 }
 
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~footer styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~content-section-v9 styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-.content-section-v9{
-  height:100vh;
-  width:100%;
+.content-section-v9 {
+  height: 100vh;
+  width: 100%;
   background-color: var(--Main-Primary);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.content-section-v9 .container{
-  height:90%;
-  width:90%;
+.content-section-v9 .container {
+  height: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  gap: 5rem;
+  padding-top: 8rem;
 }
 
-.content-section-v9 .heading-wrapper{
-  width:70%;
+.content-section-v9 .heading-wrapper {
+  width: 70%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 2rem;
   color: var(--White);
+  text-align: center;
 }
 
-.content-section-v9 .heading-wrapper h1,span{
-  font-size: 3rem;
+.content-section-v9 .heading-wrapper h1 {
+  font-size: 4rem;
   font-weight: 500;
+  width: 50%;
 }
 
-.content-section-v9 .heading-wrapper p{
+.content-section-v9 .heading-wrapper p {
   font-size: 1.8rem;
   font-weight: 300;
+  width: 100%;
 }
 
-.content-section-v9 .heading-wrapper span{
+.content-section-v9 .heading-wrapper span {
+  font-size: 4rem;
+  font-weight: 500;
   color: var(--Highlight-Primary);
 }
 
-.content-section-v9 .body{
+.content-section-v9 .body {
+  width: 90%;
+  height: 60%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  column-gap: 2rem;
+}
+
+.content-section-v9 .card1 {
+  grid-area: 1/1/2/2;
+}
+.content-section-v9 .card2 {
+  grid-area: 1/2/2/3;
+}
+.content-section-v9 .card3 {
+  grid-area: 1/3/2/4;
+}
+
+.content-section-v9 .card {
+  border-radius: 2.4rem;
+  background: rgba(126, 134, 147, 0.2);
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.content-section-v9 .card .img-wrapper {
+  height: 70%;
+  width: 95%;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 1.2rem;
+}
+
+.content-section-v9 .card .step1 {
+  background: url("../assets/step1.png");
+  background-position: bottom center;
+  
+}
+.content-section-v9 .card .step2 {
+  background: url("../assets/step2.png");
+  background-position: bottom center;
+}
+.content-section-v9 .card .step3 {
+  background: url("../assets/step3.png");
+  background-position: bottom center;
+}
+
+.content-section-v9 .card .card-content {
+  width: 95%;
+  text-align: left;
+}
+
+.content-section-v9 .card .card-content a {
+  text-decoration: underline;
+  color: var(--White);
+}
+.content-section-v9 .card .card-content h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--Highlight-Primary);
+}
+.content-section-v9 .card .card-content p {
+  font-size: 1.6rem;
+  font-weight: 200;
+  color: var(--White);
+}
+
+.content-section-v9 .container .lower-link {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--White);
+  text-decoration: underline;
 }
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~about section styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -765,14 +847,14 @@ a {
   gap: 2rem;
 }
 
-.points-container span {
+.dual-phones-section .points-container span {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 3rem;
 }
 
-.points-container .img-container {
+.dual-phones-section .points-container .img-container {
   height: 6rem;
   width: 6rem;
   background-color: var(--Highlight-Primary);
@@ -789,6 +871,169 @@ a {
 }
 
 @media only screen and (max-width: 540px) {
+}
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~flexible-section styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.flexible-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: var(--Main-Primary);
+}
+
+.flexible-section .container {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.flexible-section .right-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexible-section .right-panel img {
+  height: 54.2rem;
+  width: 54rem;
+}
+
+.flexible-section .left-panel {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  color: var(--White);
+  gap: 3rem;
+}
+
+.flexible-section .left-panel h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.flexible-section .left-panel p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.flexible-section .points-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.flexible-section .points-container span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+}
+
+.flexible-section .points-container .img-container {
+  height: 6rem;
+  width: 6rem;
+  background-color: var(--Highlight-Primary);
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~trade-section styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.trade-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: var(--Main-Primary);
+}
+
+.trade-section .container {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.trade-section .left-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trade-section .left-panel img {
+  height: 37rem;
+  width: 54rem;
+}
+
+.trade-section .right-panel {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  color: var(--White);
+  gap: 3rem;
+}
+
+.trade-section .right-panel h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.trade-section .right-panel p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.trade-section .points-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.trade-section .points-container span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+}
+
+.trade-section .points-container .img-container {
+  height: 6rem;
+  width: 6rem;
+  background-color: var(--Highlight-Primary);
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -964,14 +1209,17 @@ a {
 
 /*hidden initialy with height = 0*/
 .accordion .content {
+  padding-top: 0.5rem;
+
+
   position: relative;
   width: 90%;
-  height: 0;
+  max-height: 0;
   font-size: 1.6rem;
   font-weight: 200;
   text-align: left;
   overflow: hidden;
-  transition: all 0.5s;
+  transition: max-height 0.5s;
 }
 
 .accordion ul {
@@ -982,8 +1230,8 @@ a {
 }
 
 .accordion .container.active .content {
-  height: 10rem;
-  padding-top: 1rem;
+  max-height: 12rem;
+  /* padding-top: 1rem; */
 }
 
 .accordion .container.active .label::before {
