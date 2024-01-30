@@ -613,6 +613,7 @@ a {
   align-items: center;
   padding-left: 10rem;
   padding-right: 10rem;
+  overflow: visible;
 }
 
 .dual-phones-section .left-panel {
@@ -859,7 +860,7 @@ a {
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~testimonials section styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .testimonials-section {
-  height: 80vh;
+  height: 90vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1335,6 +1336,16 @@ a {
     height : 90%;
     width:50%;
   }
+
+  .accordion-section{
+    padding : 0;
+  }
+  .accordion-section .container{
+    width : 90%;
+  }
+  .accordion{
+    width:100%;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1369,8 +1380,63 @@ a {
   .section-2 .cards-container{
     height : 50%;
   }
+
+  .flexible-section .right-panel img{
+    height : 45rem;
+    width:45rem;
+  }
+  .trade-section .left-panel img{
+    height : 35rem;
+    width : 50rem;
+  }
+  .trade-section .right-panel h1{
+    font-size: 3rem;
+  }
+  .trade-section .right-panel p{
+    font-size: 1.6rem;
+  }
+  .trade-section .points-container span{
+    gap : 1rem;
+  }
+  .trade-section .points-container .img-container{
+    height:5rem;
+    width:5rem;
+    border-radius: 1rem;
+  }
+
+  .testimonials-section .container{
+    height: 100%;
+    padding: 2rem 0;
+    gap: 2rem;
+  }
+  
+  .content-section-v1 .container{
+    height: 100%;
+    padding: 2rem 0;
+    justify-content: space-between;
+  }
+  .content-section-v1 .left-panel{
+    padding: 0;
+    gap:2rem;
+  }
+  .content-section-v1 h1{
+    font-size: 4rem;
+    font-weight: 300;
+  }
+  .content-section-v1 .right-panel{
+    height: 38rem;
+    width : 38rem;
+  }
+
+  .footer .container-top{
+    padding : 5rem 5rem;
+  }
+  .footer .left-panel{
+    width : 50%;
+  }
 }
 
+/*tablets*/
 @media only screen and (max-width: 992px) {
   .header {
     height: 8rem;
@@ -1396,30 +1462,38 @@ a {
   .nav-menu.active {
     left: 0;
   }
-
   .nav-item {
     margin: 2.5rem 0;
   }
-
   .hamburger {
     display: block;
     cursor: pointer;
   }
-
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
-
   .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
-
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+
+  .section-2{
+    padding-top: 0rem;
+  }
+  .section-2 .container{
+    padding:2rem 4rem;
+  }
+  .section-2 .header-large{
+    font-size: 3rem;
+    width:70%;
+  }
+  .secondary-2 .header-small{
+    width:90%;
+  }
 }
 
-/* tablets */
 @media only screen and (max-width: 768px) {
   .landing-section {
     height: calc(100vh-8rem);
@@ -1450,6 +1524,7 @@ a {
 
 }
 
+/*mobiles*/
 @media only screen and (max-width: 576px) {
   .landing-section {
     height: calc(100vh-8rem);
@@ -1503,7 +1578,7 @@ a {
   }
 }
 
-/*mobiles*/
+
 @media only screen and (max-width: 425px) {
 
 }
