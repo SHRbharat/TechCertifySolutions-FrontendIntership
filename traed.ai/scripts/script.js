@@ -19,6 +19,13 @@ const accordion = document.querySelectorAll('.accordion-section .accordion .cont
 
 for (i=0; i<accordion.length; i++) {
   accordion[i].addEventListener('click', function () {
-    this.classList.toggle('active')
+    this.classList.toggle('active');
+    
+    //collapse others
+    for(i=0;i<accordion.length;i++){
+      if(accordion[i] != this){
+        accordion[i].classList.remove('active');
+      }
+    }
   })
 }
