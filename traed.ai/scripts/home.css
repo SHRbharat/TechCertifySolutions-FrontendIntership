@@ -28,7 +28,9 @@ html {
   height: fit-content;
   width: 100%;
   overflow: hidden;
+}
 
+.main-section{
   /*for alterning order of sections*/
   display: flex;
   flex-direction: column;
@@ -329,7 +331,6 @@ a {
   flex-shrink: 0;
 
   border-radius: 3rem;
-  /* background: lightgray 0.42px -2.309px / 100% 118.07% no-repeat; */
   background-color: lightgray;
   background-size: cover;
   background-repeat: no-repeat;
@@ -425,7 +426,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   padding-top: 8rem;
 }
 
@@ -483,10 +484,11 @@ a {
   background: rgba(126, 134, 147, 0.2);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 2rem;
+  gap : 2rem;
 }
 
 .content-section-v9 .card .img-wrapper {
@@ -607,8 +609,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 10rem;
-  padding-right: 10rem;
+  padding : 2rem 5rem;
   overflow: visible;
 }
 
@@ -639,7 +640,7 @@ a {
 
 .dual-phones-section .right-panel {
   height: 100%;
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -704,8 +705,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 10rem;
-  padding-right: 10rem;
+  padding : 2rem 5rem
 }
 
 .flexible-section .right-panel {
@@ -722,7 +722,7 @@ a {
 
 .flexible-section .left-panel {
   height: 100%;
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1292,6 +1292,45 @@ a {
   .section-2 .card{
     gap:1rem;
   }
+
+  .content-section-v9 .heading-wrapper{
+    width: 90%;
+  }
+  .content-section-v9 .heading-wrapper h1{
+    width: 80%;
+  }
+  .content-section-v9 .body{
+    width: 100%;
+  }
+
+  .dual-phones-section .container{
+    width: 100%;
+    padding-left: 13%;
+    padding-right: 1rem;
+  }
+  .dual-phones-section .right-panel{
+    width: 55%;
+  }
+  .dual-phones-section .points-container span,
+  .flexible-section .points-container span{
+    gap : .5rem;
+  }
+  .dual-phones-section .phone-outer{
+    width : 23rem;
+    height : 48rem;
+  }
+  .dual-phones-section .phone-inner{
+    width : 21rem;
+    height : 46rem;
+  }
+  
+  .flexible-section .container{
+    width: 100%;
+  }
+  .flexible-section .right-panel img {
+    height: 50rem;
+    width : 50rem;
+  }
 }
 
 @media only screen and (max-width:1080px){
@@ -1306,9 +1345,20 @@ a {
     font-size: 1.6rem;
     width: 90%;
   }
-  .section-2 .card ,
-  .section-2 .cards-master{
+  .section-2 .card {
     padding: 1rem;
+  }
+
+  .content-section-v9 .container{
+    width: 97%;
+  }
+
+  .flexible-section .container{
+    padding : 2rem 2rem;
+  }
+  .flexible-section .right-panel img{
+    height: 45rem;
+    width: 45rem;
   }
 }
 
@@ -1319,6 +1369,16 @@ a {
   }
   .landing-section .button-container{
     width:80%;
+  }
+
+  .about-section .container{
+    padding: 2rem;
+  }
+  .about-section .left-panel{
+    width : 50%;
+  }
+  .about-section .h1{
+    font-size: 5rem;
   }
 }
 
@@ -1422,6 +1482,79 @@ a {
     max-height: 47rem;
     margin: auto;
   }
+
+  .content-section-v9 .container{
+    width : 95%
+  }
+  .content-section-v9 .body{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,1fr);
+    row-gap: 2rem;
+    width : 90%;
+  }
+  .content-section-v9 .card1 {
+    grid-area: 1/1/2/2;
+  }
+  .content-section-v9 .card2 {
+    grid-area: 2/1/3/2;
+  }
+  .content-section-v9 .card3 {
+    grid-area: 3/1/4/2;
+  }
+  .content-section-v9 .card{
+    max-width: 100%;
+    max-height: 30rem;
+  }
+
+  .about-section .container{
+    flex-direction: column;
+    justify-content: center;
+    gap : 2rem;
+  }
+  .about-section .left-panel{
+    width: 90%;
+    height: fit-content;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap:1rem;
+  }
+  .about-section .right-panel{
+    width : 90%;
+  }
+
+  .dual-phones-section .container,
+  .flexible-section .container{
+    flex-direction: column;
+    padding: 2rem 5rem;
+  }
+  .dual-phones-section .left-panel{
+    padding-left: 10%;
+  }
+  .dual-phones-section .phone-outer{
+    width : 27rem;
+    height : 49rem;
+  }
+  .dual-phones-section .phone-inner{
+    width : 25rem;
+    height : 47rem;
+  }
+  .dual-phones-section .right-panel,
+  .flexible-section .left-panel{
+    width: 100%;
+    padding-top: 8rem;
+    padding-left: 3rem;
+    gap:2rem;
+  }
+
+  .flexible-section .right-panel{
+    padding-top: 4rem;
+    width : 95%;
+  }
+  .flexible-section .right-panel img{
+    max-width: 50rem;
+    max-height: 50rem;
+  }
 }
 
 @media only screen and (max-width : 736px){
@@ -1437,9 +1570,22 @@ a {
     width:100%;
     padding: 2rem 2rem;
   }
+
+  .about-section .left-panel,
+  .about-section .right-panel{
+    width: 100%;
+  }
+
+  .dual-phones-section .right-panel{
+    padding-left: 1rem;
+  }
+  .flexible-section .left-panel{
+    padding-left: 0;
+  }
+  
 }
 
-
+/*mobile screens*/
 @media only screen and (max-width : 576px){
   html{
     font-size: 55%;
@@ -1508,10 +1654,73 @@ a {
     background-color: var(--Highlight-Primary);
     color: var(--White);
   }
+
+  .content-section-v9 .heading-wrapper,
+  .content-section-v9 .heading-wrapper h1{
+    width : 95%;
+  }
+  .content-section-v9 .body{
+    width : 95%;
+  }
+  .content-section-v9 .card{
+    max-height: 35rem;
+  }
+
+  .about-section{
+    display: none;
+  }
+
+  .dual-phones-section .container{
+    width: 96%;
+    padding-left : 0;
+    padding-right: 0;
+  }
+  .dual-phones-section .left-panel,
+  .dual-phones-section .right-panel{
+    width: 100%;
+  }
+  .dual-phones-section .left-panel{
+    padding-left: 17%;
+  }
+  .dual-phones-section .phone-outer{
+    width : 21rem;
+    height : 45rem;
+  }
+  .dual-phones-section .phone-inner{
+    width : 19rem;
+    height : 43rem;
+  }
+  .dual-phones-section .right-panel{
+    padding-left: 0;
+  }
+  .dual-phones-section .points-container .img-container,
+  .flexible-section .points-container .img-container,
+  .trade-section .points-container .img-container{
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .flexible-section .left-panel{
+    order: 1;
+  }
+
 } 
 
 @media only screen and (max-width : 410px){
   .landing-section{
     background-position: 90% center;
+  }
+
+  .dual-phones-section .phone-back{
+    transform: rotate(-3deg) translate(3rem,0);
+  }
+
+  .flexible-section .container{
+    width : 96%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .flexible-section .right-panel img{
+    width : 95%;
   }
 }
