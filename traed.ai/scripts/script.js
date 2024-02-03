@@ -29,3 +29,14 @@ for (i=0; i<accordion.length; i++) {
     }
   })
 }
+
+function secButtonText(){
+  if(window.innerWidth <= 576){
+    document.querySelector(".landing-section .secondary-button").innerHTML = "Learn more";
+  }else{
+    document.querySelector(".landing-section .secondary-button").innerHTML = "No credit card necessary. Its free!!";
+  }
+}
+
+secButtonText();
+window.addEventListener('resize',secButtonText);
