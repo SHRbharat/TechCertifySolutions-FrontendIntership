@@ -479,7 +479,7 @@ a {
 
 .content-section-v9 .card {
   border-radius: 2.4rem;
-  max-height : 45rem;
+  height : 45rem;
   max-width : 35rem;
   background: rgba(126, 134, 147, 0.2);
   display: flex;
@@ -500,6 +500,8 @@ a {
   width:100%;
   height: 100%;
   border-radius: 1.8rem;
+  object-fit: cover;
+  object-position: center bottom;
 }
 
 .content-section-v9 .card .card-content {
