@@ -621,20 +621,24 @@ a {
   align-items: center;
 }
 
-.dual-phones-section .phone-back {
+.dual-phones-section .phone-back,
+.content-section-v1 .phone-back {
   z-index: 10;
   transform: rotate(-3deg);
 }
-.dual-phones-section .phone-front {
+.dual-phones-section .phone-front ,
+.content-section-v1 .phone-front{
   z-index: 20;
   transform: rotate(5deg) translate(-8rem, 4rem);
 }
 
-.dual-phones-section .phone-back .phone-inner {
+.dual-phones-section .phone-back .phone-inner ,
+.content-section-v1 .phone-back .phone-inner{
   background-image: url("../assets/smartphoneBack.png");
 }
 
-.dual-phones-section .phone-front .phone-inner {
+.dual-phones-section .phone-front .phone-inner ,
+.content-section-v1 .phone-front .phone-inner{
   background-image: url("../assets/smartphoneFront.png");
 }
 
@@ -789,7 +793,7 @@ a {
   align-items: center;
   padding-left: 10rem;
   padding-right: 10rem;
-  gap:2rem;
+  
 }
 
 .trade-section .left-panel {
@@ -884,12 +888,13 @@ a {
 .testimonials-section .testimonials {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap : 5%;
 }
 
 .testimonials-section .card {
-  max-height: 35rem;
+  max-height: 45rem;
   max-width: 57rem;
   border-radius: 4rem;
   background: rgba(126, 134, 147, 0.1);
@@ -935,7 +940,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 5rem;
 }
 
 .content-section-v1 .container {
@@ -1004,6 +1008,10 @@ a {
   border-radius: 2rem;
 }
 
+.content-section-v1 .phone-back,
+.content-section-v1 .phone-front{
+  display: none;
+}
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~accodrian-section styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -1084,7 +1092,7 @@ a {
   content: "+";
   position: absolute;
   top: 50%;
-  right: -5px;
+  right: -8px;
   transform: translateY(-50%);
 }
 
@@ -1110,7 +1118,7 @@ a {
 }
 
 .accordion .container.active .content {
-  max-height: 12rem;
+  max-height: 14rem;
   /* padding-top: 1rem; */
 }
 
@@ -1139,7 +1147,6 @@ a {
   padding: 10rem 4rem;
   display: flex;
   justify-content: space-between;
-  gap: 30rem;
 }
 
 .footer .left-panel {
@@ -1194,7 +1201,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 5rem;
+  gap : 10%;
   font-family: "Inter", sans-serif;
 }
 
@@ -1238,7 +1245,7 @@ a {
 }
 
 .footer .container-bottom {
-  width: 100%;
+  width: 90%;
   height: 6rem;
   display: flex;
   justify-content: center;
@@ -1247,6 +1254,7 @@ a {
   font-family: "Inter", sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
+  text-align: center;
 }
 
 .footer .container-bottom a {
@@ -1331,6 +1339,29 @@ a {
     height: 50rem;
     width : 50rem;
   }
+
+  .trade-section .container{
+    width : 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .content-section-v1 .container{
+    height: 95%;
+    padding: 2rem;
+  }
+
+  .accordion-section .container{
+    width: 95%;
+  }
+
+  .footer .container-top{
+    width: 90%;
+    padding: 5rem 3rem;
+  }
+  .footer .container-top .left-panel{
+    width : 40%;
+  }
 }
 
 @media only screen and (max-width:1080px){
@@ -1360,6 +1391,27 @@ a {
     height: 45rem;
     width: 45rem;
   }
+
+  .trade-section .left-panel img{
+    height : 35rem;
+    width: 50rem;
+  }  
+
+  .testimonials-section .testimonials{
+    gap : 3%;
+  }
+  .testimonials-section .testimonials .card{
+    padding: 3rem;
+  }
+
+  .content-section-v1 .container{
+    justify-content: center;
+    gap : 5%;
+  }
+  .content-section-v1 .left-panel{
+    width : 60%;
+    padding-left: 0;
+  }
 }
 
 @media only screen and (max-width:990px){
@@ -1379,6 +1431,18 @@ a {
   }
   .about-section .h1{
     font-size: 5rem;
+  }
+
+  .trade-section .left-panel img{
+    height : 33rem;
+    width: 45rem;
+  }
+  .trade-section .right-panel{
+    gap : 1.5rem;
+  }
+  .trade-section .points-container span{
+    justify-content: flex-start;
+    gap : 1rem;
   }
 }
 
@@ -1400,7 +1464,7 @@ a {
     color: var(--White);
 
     width: 100%;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
     text-align: center;
     transition: all 0.3s;
     gap : 1.5rem;
@@ -1524,7 +1588,8 @@ a {
   }
 
   .dual-phones-section .container,
-  .flexible-section .container{
+  .flexible-section .container,
+  .trade-section .container{
     flex-direction: column;
     padding: 2rem 5rem;
   }
@@ -1540,7 +1605,8 @@ a {
     height : 47rem;
   }
   .dual-phones-section .right-panel,
-  .flexible-section .left-panel{
+  .flexible-section .left-panel,
+  .trade-section .right-panel{
     width: 100%;
     padding-top: 8rem;
     padding-left: 3rem;
@@ -1554,6 +1620,68 @@ a {
   .flexible-section .right-panel img{
     max-width: 50rem;
     max-height: 50rem;
+  }
+
+  .trade-section .left-panel{
+    width: 100%;
+    padding:2rem 0;
+  }
+  .trade-section .left-panel img{
+    min-width: 95%;
+    max-height: 35rem;
+  }
+  .trade-section .right-panel{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .testimonials-section .container{
+    gap: 2rem;
+    padding: 2rem 2rem;
+  }
+  .testimonials-section .testimonials{
+    flex-direction: column;
+    gap : 2rem;
+  }
+
+  .content-section-v1 .container{
+    flex-direction: column;
+    gap : 2rem;
+  }
+  .content-section-v1 .left-panel,
+  .content-section-v1 .right-panel{
+    height: fit-content;
+    width : 100%;
+    gap : 1.5rem;
+  }
+
+  .accordion-section{
+    padding: 2rem 0;
+  }
+  .accordion-section .heading{
+    width : 85%;
+  }
+  .accordion{
+    width: 100%;
+  }
+
+  .footer .container-top{
+    width: 95%;
+    padding: 5rem 0;
+  }
+  .footer .container-top .left-panel{
+    width : 50%;
+  }
+  .footer .container-top .right-panel{
+    width: 40%;
+  }
+
+  .footer .horizontal-rule{
+    width : 90%;
+  }
+  .footer .container-bottom{
+    height : 8rem;
+    padding: 2rem;
   }
 }
 
@@ -1583,13 +1711,16 @@ a {
     padding-left: 0;
   }
   
+  .accordion-section .accordion .container.active .content{
+    max-height:20rem
+  }
 }
 
 /*mobile screens*/
 @media only screen and (max-width : 576px){
-  html{
+  /* html{
     font-size: 55%;
-  }
+  } */
 
   .landing-section {
     background: linear-gradient(0deg,rgba(0, 0, 0, 0.2) 0%,rgba(0, 0, 0, 0.2) 100%),url("../assets/backgroundLarge.jfif"), lightgray -904.39px 0px / 346.82% 100% no-repeat;
@@ -1691,7 +1822,7 @@ a {
     height : 43rem;
   }
   .dual-phones-section .right-panel{
-    padding-left: 0;
+    padding-left:2rem;
   }
   .dual-phones-section .points-container .img-container,
   .flexible-section .points-container .img-container,
@@ -1704,6 +1835,71 @@ a {
     order: 1;
   }
 
+  .trade-section .right-panel{
+    padding : 3rem 1rem;
+    padding-right: 0;
+  }
+
+  .testimonials-section .container{
+    width: 100%;
+  }
+  .testimonials-section .testimonials .card{
+    padding: 1.5rem;
+  }
+  .testimonials-section .testimonials .card .user-wrapper{
+    gap : 1rem;
+  }
+
+  .content-section-v1{
+    background-color: var(--Highlight-Primary);
+  }
+  .content-section-v1 .primary-button{
+    background-color: var(--Main-Primary);
+  }
+  .content-section-v1 .container{
+    padding-bottom: 8rem;
+  }
+  .content-section-v1 h1{
+    font-size: 4rem;
+  }
+  .content-section-v1 .right-panel{
+    padding-left: 23%;
+  }
+  .content-section-v1 .right-panel img{
+    display: none;
+  }
+  .content-section-v1 .right-panel .phone-back,
+  .content-section-v1 .right-panel .phone-front{
+    display: block;
+  }
+  .content-section-v1 .phone-outer{
+    width : 21rem;
+    height : 45rem;
+  }
+  .content-section-v1 .phone-inner{
+    width : 19rem;
+    height : 43rem;
+  }
+
+  .accordion-section .heading{
+    width : 100%;
+  }
+  .accordion-section .accordion .container{
+    padding: 2rem 0;
+  }
+
+  .footer .container-top{
+    flex-direction: column;
+    justify-content: center;
+    gap : 2rem;
+    padding-left: 3%;
+  }
+  .footer .container-top .left-panel{
+    width : 95%;
+  }
+  .footer .container-top .right-panel{
+    width : 95%;
+  }
 } 
 
 @media only screen and (max-width : 410px){
@@ -1711,16 +1907,47 @@ a {
     background-position: 90% center;
   }
 
-  .dual-phones-section .phone-back{
-    transform: rotate(-3deg) translate(3rem,0);
+  .dual-phones-section .phone-back,
+  .content-section-v1 .phone-back{
+    transform: rotate(-3deg) translate(4rem,0);
+  }
+  .dual-phones-section .right-panel{
+    padding-left: 1rem;
   }
 
-  .flexible-section .container{
-    width : 96%;
+  .flexible-section .container,
+  .trade-section .container{
+    width : 95%;
     padding-left: 0;
     padding-right: 0;
   }
   .flexible-section .right-panel img{
     width : 95%;
+  }
+
+  .content-section-v1 .container{
+    width: 95%;
+    padding: 3rem 0 8rem 0;
+  }
+  .content-section-v1 .phone-outer,
+  .dual-phones-section .phone-outer{
+    width : 18rem;
+    height : 38rem;
+  }
+  .content-section-v1 .phone-inner,
+  .dual-phones-section .phone-inner{
+    width : 16rem;
+    height : 36rem;
+  }
+  .content-section-v1 .right-panel{
+    padding-left: 10%;
+  }
+
+  .footer .horizontal-rule{
+    width : 95%;
+  }
+  .footer .container-bottom{
+    height : 10rem;
+    padding: 1rem;
   }
 }
