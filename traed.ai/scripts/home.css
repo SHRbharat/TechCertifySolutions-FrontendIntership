@@ -1683,6 +1683,38 @@ a {
     height : 8rem;
     padding: 2rem;
   }
+
+  /*order of sections*/
+  .landing-section{
+    order :0 ;
+  }
+  .section-2{
+    order : 1;
+  }
+  .content-section-v9{
+    order : 6;
+  }
+  .about-section{
+    order : 2;
+  }
+  .dual-phones-section{
+    order : 3;
+  }
+  .flexible-section{
+    order : 4;
+  }
+  .trade-section{
+    order : 5;
+  }
+  .testimonials-section{
+    order :7 ;
+  }
+  .content-section-v1{
+    order :8 ;
+  }
+  .accordion-section{
+    order : 9;
+  }
 }
 
 @media only screen and (max-width : 736px){
