@@ -1,20 +1,29 @@
+//hamburger menu script
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
-
 hamburger.addEventListener("click", mobileMenu);
-
 function mobileMenu() {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
 }
 
-if(window.innerWidth <= 540){
-  document.querySelector(".main-section .secondary-button").innerHTML = "Learn more";
+//hide menu on item click
+const navItems = document.querySelectorAll(".nav-menu .nav-item");
+function navLocate(){
+  navItems.forEach(element => {
+    if(window.innerWidth <= 924){
+      element.addEventListener("click",mobileMenu);
+    }else{
+      element.removeEventListener('click',mobileMenu);
+    }
+  });
 }
 
+navLocate();
+window.addEventListener("resize",navLocate);
 
-//accordian
+//accordian script
 const accordion = document.querySelectorAll('.accordion-section .accordion .container');
 
 for (i=0; i<accordion.length; i++) {
@@ -30,6 +39,7 @@ for (i=0; i<accordion.length; i++) {
   })
 }
 
+//script to change text of button on small screens
 function secButtonText(){
   if(window.innerWidth <= 576){
     document.querySelector(".landing-section .secondary-button").innerHTML = "Learn more";
