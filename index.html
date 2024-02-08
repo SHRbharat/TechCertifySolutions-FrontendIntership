@@ -7,6 +7,20 @@
 </head>
 <body>
     <h1> NAVIGATE USING THE BELOW LINKS</h1>
-    <a href="traed.ai/home.html" >project-1 (Traed.Ai)</a>
+    <ol>
+        <li><a href="traed.ai/home.html" >project-1 (Traed.Ai)</a></li>
+        <ul>
+            <li><a href="traed.ai/home.html" >home page</a></li>
+            <li><a href="traed.ai/contact.html" >contact page</a></li>
+        </ul>
+    </ol>
+    
+    <script>
+        // Select all <a> tags and set the target attribute to "_blank"
+        var aTags = document.querySelectorAll('a');
+        aTags.forEach(function(aTag) {
+            aTag.setAttribute('target', '_blank');
+        });
+    </script>
 </body>
 </html>
