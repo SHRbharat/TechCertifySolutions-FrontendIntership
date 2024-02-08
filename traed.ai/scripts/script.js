@@ -9,7 +9,7 @@ function mobileMenu() {
 }
 
 //hide menu on item click
-const navItems = document.querySelectorAll(".nav-menu .nav-item");
+const navItems = document.querySelectorAll(".nav-menu .nav-link");
 function navLocate(){
   navItems.forEach(element => {
     if(window.innerWidth <= 924){
