@@ -141,29 +141,34 @@ a {
 /*end of smartphone design*/
 .decoration{
   position: absolute;
-  height: 30rem;
-  width :30rem;
+  height: 40rem;
+  width :40rem;
   border-radius: 50%;
-  background-color: rgba(33, 243, 64, 0.09);
+  background-color: rgba(184, 235, 54, 0.098);
   /* box-shadow: 10px 13px 126px 65px rgba(45,55,53,0.8); */
-  box-shadow: 10px 10px 89px 100px rgba(33,243,64,0.1);
-  z-index: 0;
+  box-shadow: 10px 10px 89px 100px rgba(184,235,54,0.1);
+  z-index: 90;
 }
 section{
   position: relative;
   overflow-y: visible;
 }
 .section-2 .decoration{
+  position: absolute;
   right : 5rem;
   top : 10rem;
 }
-.section-3 .decoration{
-  left : -5rem;
-  bottom : -20rem;
-}
 .about-section .decoration{
-  top : -20rem;
-  left:-5rem;
+  left : -5rem;
+  top : -15rem;
+}
+.dual-phones-section .decoration{
+  left: 10rem;
+  bottom: -20rem;
+}
+.testimonials-section .decoration{
+  top : -10rem;
+  right : 15rem;
 }
 
 @media only screen and (max-width : 1080px) {
@@ -171,6 +176,11 @@ section{
   section,
   footer {
     padding: 5rem;
+  }
+
+  .decoration{
+    height: 30rem;
+    width: 30rem;
   }
 }
 
@@ -202,6 +212,11 @@ section{
 
   .flex-section {
     align-items: flex-start;
+  }
+
+  .decoration{
+    height: 20rem;
+    width: 20rem;
   }
 }
 
@@ -237,6 +252,11 @@ section{
   section,
   footer {
     padding: 4rem 2rem;
+  }
+
+  .decoration{
+    height: 15rem;
+    width: 15rem;
   }
 }
 
@@ -591,7 +611,6 @@ section{
 .points-container .img-container {
   min-height: 6rem;
   min-width: 6rem;
-  /*fallback*/
   background-color: var(--Highlight-Primary);
   border: none;
   border-radius: 10px;
