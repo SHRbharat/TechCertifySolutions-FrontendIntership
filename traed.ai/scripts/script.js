@@ -39,6 +39,21 @@ for (i=0; i<accordion.length; i++) {
   })
 }
 
+//accordion-sm script
+const accordion_sm = document.querySelectorAll(".accordion-sm .container");
+
+accordion_sm.forEach( x =>{
+  x.addEventListener("click",function(){
+    x.classList.toggle('active');
+
+    accordion_sm.forEach( y => {
+      if( x != y){
+        y.classList.remove('active');
+      }
+    })
+  })
+})
+
 //script to change text of button on small screens
 function secButtonText(){
   if(window.innerWidth <= 576){

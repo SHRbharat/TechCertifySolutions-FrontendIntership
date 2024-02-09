@@ -139,6 +139,8 @@ a {
   left: 43%;
 }
 /*end of smartphone design*/
+
+/*decoration styles*/
 .decoration{
   position: absolute;
   height: 40rem;
@@ -151,7 +153,7 @@ a {
 }
 section{
   position: relative;
-  overflow-y: visible;
+  /* overflow-y: visible; */
 }
 .section-2 .decoration{
   position: absolute;

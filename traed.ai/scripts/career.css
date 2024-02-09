@@ -3,6 +3,7 @@ layout 1 : > 924px;
 layout 2 : <= 924px
 layout 3 : <= 576px
 */
+/* background: radial-gradient(circle at top right, rgba(6,186,99,1) 0%, rgba(12,32,39,1) 29%, rgba(12,32,39,1) 97%); */
 
 :root {
     --Main-Primary: #0c2027;
@@ -43,6 +44,11 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+h1 {
+    font-size: 7rem;
+    font-weight: 700;
 }
 
 h2 {
@@ -96,12 +102,43 @@ a {
     cursor: pointer;
 }
 
-/*end of smartphone design*/
+/*decoration styles*/
+.decoration {
+    position: absolute;
+    height: 40rem;
+    width: 40rem;
+    border-radius: 50%;
+    background-color: rgba(184, 235, 54, 0.098);
+    /* box-shadow: 10px 13px 126px 65px rgba(45,55,53,0.8); */
+    box-shadow: 10px 10px 89px 100px rgba(184, 235, 54, 0.1);
+    z-index: 90;
+}
+
+section {
+    position: relative;
+}
+
+.section-2 .decoration {
+    position: absolute;
+    right: 5rem;
+    top: 10rem;
+}
+
+.testimonials-section .decoration {
+    top: -10rem;
+    right: 15rem;
+}
+
 @media only screen and (max-width : 1080px) {
 
     section,
     footer {
         padding: 5rem;
+    }
+
+    .decoration {
+        height: 30rem;
+        width: 30rem;
     }
 }
 
@@ -133,6 +170,11 @@ a {
 
     .flex-section {
         align-items: flex-start;
+    }
+
+    .decoration {
+        height: 20rem;
+        width: 20rem;
     }
 }
 
@@ -168,6 +210,11 @@ a {
     section,
     footer {
         padding: 4rem 2rem;
+    }
+
+    .decoration {
+        height: 15rem;
+        width: 15rem;
     }
 }
 
@@ -232,6 +279,231 @@ a {
 }
 
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~landing-section styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.landing-section {
+    min-height: calc(100vh - 10rem);
+    position: relative;
+    background-color: var(--Main-Primary);
+}
+
+.landing-section .we-are-hiring{
+    color: var(--White);
+    width: 20rem;
+    padding : 1.4rem 2rem;
+    border: 2px solid var(--White);
+    border-radius: 3rem 3rem 3rem 0;
+    text-align: center;
+    position: relative;
+    margin-left: auto;
+    top : 5rem;
+}
+
+.landing-section h3 {
+    width: 80%;
+    color: var(--White);
+    margin: auto;
+    position: relative;
+    top: 5rem;
+    text-align: center;
+    word-spacing: 1rem;
+}
+
+.landing-section h3 span:first-child{
+    color: var(--Highlight-Primary);
+    font-size: 8rem;
+    font-weight: 700;
+    letter-spacing: .6rem;
+}
+
+.landing-section p {
+    width: 90%;
+    color: var(--White);
+    position: relative;
+    margin: 4rem auto;
+    top : 5rem;
+    text-align: center;
+}
+
+.landing-section .lower-link{
+    color: var(--White);
+    text-align: center;
+    width: fit-content;
+    border-bottom: 2px solid var(--White);
+    margin: auto;
+    top:5rem;
+}
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ~~~~~~~~~~~wellness-section styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.wellness-section{
+    background-color: #DFE0E4;
+    min-height: 100vh;   
+}
+
+.wellness-section .img-panel{
+    flex-basis: 50%;
+    padding : 0rem 2rem;
+    text-align: left;
+    max-height: 100%;
+}
+
+.wellness-section h3{
+    color: #000;
+    margin-bottom: 1.5rem;
+}
+.wellness-section p{
+    color: var(--Secondary);
+    width: 60%;
+    margin-bottom: 2rem;
+}
+.wellness-section img{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+/*accordion styles*/
+.accordion-sm {
+    flex-basis: 50%;
+    width: 50%;
+    margin: auto;
+    padding-left: 10rem;
+}
+
+.accordion-sm .container {
+    padding: 2rem 0;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #000;
+    margin: auto auto 1rem auto;
+}
+
+.accordion-sm .label {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    padding-right: 2rem;
+    cursor: pointer;
+    color: #000;
+}
+
+.accordion-sm .container:not(.active) .label i:nth-child(2){
+    position: absolute;
+    top : 50%;
+    right : 0;
+    transform: translateY(-50%);
+}
+
+.accordion-sm .container:not(.active) .label i:nth-child(1){
+    display: none;
+}
+
+.accordion-sm .content {
+    padding: 0.5rem 0 0 0;
+    position: relative;
+    width: 100%;
+    max-height: 0;
+    text-align: left;
+    color: var(--Secondary);
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.accordion-sm .content p{
+    width : 90%;
+}
+
+.accordion-sm ul {
+    padding-left: 2rem;
+}
+
+.accordion-sm li {
+    list-style-type: disc;
+}
+
+.accordion-sm .container.active .content {
+    max-height: 15rem;
+}
+
+.accordion-sm .container.active .label i:nth-child(1){
+    display: inline;
+    position: absolute;
+    top : 50%;
+    right : 0;
+    transform: translateY(-50%);
+} 
+.accordion-sm .container.active .label i:nth-child(2){
+    display: none;
+} 
+
+/*end of accordion styles*/
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ~~~~~~~~~~~common styles (about, dual-phones,flexible,trade,content-v1)~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.accordion-section,
+.testimonials-section ,
+.form-section{
+    min-height: 100vh;
+    width: 100%;
+    background: var(--Main-Primary);
+}
+
+.accordion-section h3,
+.testimonials-section h3{
+    color: var(--White);
+    width: 50%;
+    margin: auto auto 1.5rem auto;
+    text-align: center;
+}
+
+.sub-heading {
+    color: var(--Secondary);
+    width: 70%;
+    margin: auto auto 1.5rem auto;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.points-container {
+    width: 100%;
+}
+
+.points-container .point {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.points-container .point p {
+    margin: auto 0;
+}
+
+.points-container .img-container {
+    min-height: 6rem;
+    min-width: 6rem;
+    background-color: var(--Highlight-Primary);
+    border: none;
+    border-radius: 10px;
+    position: relative;
+}
+
+.points-container .img-container img {
+    height: 4rem;
+    width: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~form-section styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .form-panel {
@@ -271,7 +543,8 @@ form .input-grp {
     width: 50%;
 }
 
-form .textarea-grp {
+form .textarea-grp ,
+form .dropdown-grp{
     flex-basis: 100%;
     width: 100%;
 }
@@ -292,16 +565,24 @@ form label {
     margin-bottom: 1rem;
 }
 
-form input {
+form input ,
+form select{
     width: 100%;
     height: 5rem;
-    border-radius: 5rem;
+    border-radius: 1rem;
     border: none;
     padding-left: 2rem;
     font-size: 1.8rem;
     background-color: #7E869333;
     color: var(--White);
 }
+
+.dropdown-grp option{
+    width : 100%;
+}
+/* form select{
+    background-position: right 10px center;
+} */
 
 form input::placeholder,
 form textarea::placeholder {
@@ -311,7 +592,7 @@ form textarea::placeholder {
 form textarea {
     width: 100%;
     height: 20rem;
-    border-radius: 2rem;
+    border-radius: 1rem;
     border: none;
     padding: 2rem;
     font-size: 1.8rem;
@@ -320,79 +601,60 @@ form textarea {
     resize: none;
 }
 
+
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      ~~~~~~~~~~~common styles ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~testimonials section styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-.content-section-v1,
-.form-section {
-    min-height: 100vh;
-    background-color: var(--Main-Primary);
+.testimonials-section {
+    min-height: 80vh;
 }
 
-.text-panel,
-.img-panel {
-    padding: 2rem;
-    max-height: 100%;
-    flex-basis: 50%;
-    width: 50%;
+.testimonials {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5%;
+    margin: auto;
+    padding-top: 4rem;
+}
+
+.testimonials .card {
+    max-height: 45rem;
+    flex-basis: 45%;
+    width: 45%;
+    border-radius: 4rem;
+    background: rgba(126, 134, 147, 0.1);
+    padding: 5rem;
+}
+
+.testimonials .card p {
+    width: 100%;
     color: var(--White);
 }
 
-.text-panel {
-    text-align: left;
-    margin: auto;
-}
-
-.text-panel h2,
-.text-panel h3,
-.text-panel p {
+.testimonials .user-wrapper {
     width: 100%;
-    margin-bottom: 2rem;
-}
-
-.img-panel img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 2rem;
-    object-fit: cover;
-}
-
-.points-container {
-    width: 100%;
-}
-
-.points-container .point {
+    margin-top: 1.5rem;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     gap: 2rem;
-    margin-bottom: 1.5rem;
 }
 
-.points-container .point p {
-    margin: auto 0;
-}
-
-.points-container .img-container {
-    min-height: 6rem;
-    min-width: 6rem;
-    /*fallback*/
-    background-color: var(--Highlight-Primary);
+.testimonials-section .img-wrapper {
+    height: 5.8rem;
+    width: 5.8rem;
     border: none;
     border-radius: 50%;
-    position: relative;
     overflow: hidden;
+    display: inline-block;
 }
 
-.points-container .img-container img {
-    height: 3rem;
-    width: 4rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.testimonials-section img {
+    height: 100%;
+    width: 100%;
 }
-
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~accodrian-section styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -401,21 +663,6 @@ form textarea {
     min-height: 100vh;
     width: 100%;
     background: var(--Main-Primary);
-}
-
-.accordion-section h3 {
-    color: var(--White);
-    width: 50%;
-    margin: auto auto 1.5rem auto;
-    text-align: center;
-}
-
-.sub-heading {
-    color: var(--Secondary);
-    width: 70%;
-    margin: auto auto 1.5rem auto;
-    text-align: center;
-    margin-bottom: 2rem;
 }
 
 /*accordion styles*/
@@ -479,6 +726,7 @@ form textarea {
 }
 
 /*end of accordion styles*/
+
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~footer styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -589,6 +837,7 @@ form textarea {
 /* ********************************************************************************
   ############################ Responsive Design (written on 1536 * 720)#################################
   ******************************************************************************** */
+
 @media only screen and (min-width : 1840px) {
     section,
     footer {
@@ -620,26 +869,43 @@ form textarea {
         gap: 1.8rem;
     }
 
+    .landing-section h3{
+        width: 90%;
+    }
+    .landing-section h3 span:first-child{
+        letter-spacing: normal;
+    }
+
+    .wellness-section .img-panel h3,
+    .wellness-section .img-panel p{
+        width : 90%;
+    }
+
+    .testimonials {
+        width: 100%;
+        gap: 1.5rem;
+    }
+
     .sub-heading,
-    .accordion-section h3 {
+    .accordion-section h3,
+    .testimonials-section h3 {
         width: 90%;
     }
 
     .text-panel,
-    .img-panel,
-    .form-panel {
+    .img-panel ,
+    .form-panel
+    {
         padding: 0rem 1rem;
+    }
+
+    .testimonials .card {
+        padding: 3rem;
     }
 
     .footer .container-top .left-panel {
         flex-basis: 40%;
         width: 40%;
-    }
-}
-
-@media only screen and (max-width:1080px) {
-    .content-section-v1 {
-        min-height: 80vh;
     }
 }
 
@@ -694,21 +960,53 @@ form textarea {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    .content-section-v1 {
-        min-height: 100vh;
+    /*landing section styles*/
+    .landing-section {
+        min-height: calc(100vh-8rem);
+        margin-top: 8rem;
+    }
+    .landing-section h3,p{
+        width: 100%;
+    }
+    .landing-section h3 span:first-child{
+        font-size: 6rem;
+    }
+    .landing-section h3 span:nth-child(2){
+        color: var(--Primary-2);
+    }
+    .landing-section .we-are-hiring{
+        width : 18rem;
+        top : 2rem;
+        margin-bottom: 2rem;
+    }
+    .landing-section h3{
+        top : 2rem;
+        margin-bottom: 2rem;
+        padding: 0;
+    }
+    .landing-section p{
+        top:2rem;
+        margin-bottom: 1.5rem;
+        padding: 0;
+    }
+    .landing-section .lower-link{
+        top:2rem;
     }
 
-    .text-panel,
-    .info-panel {
+    .text-panel ,
+    .info-panel,
+    .accordion-sm{
         flex-basis: 100%;
         width: 100%;
         padding: 0;
     }
 
-    .img-panel {
+    .img-panel,
+    .wellness-section .img-panel{
         flex-basis: 100%;
         width: 100%;
         margin: 2rem 0rem;
+        padding: 0;
     }
 
     .form-panel {
@@ -721,6 +1019,11 @@ form textarea {
         width: 100%;
     }
 
+    .testimonials .card {
+        flex-basis: 90%;
+        width: 90%;
+    }
+
     .footer .container-top .left-panel {
         flex-basis: 50%;
         width: 50%;
@@ -729,6 +1032,21 @@ form textarea {
 
 /*mobile screens*/
 @media only screen and (max-width : 576px) {
+    .landing-section .we-are-hiring,
+    .landing-section h3,
+    .landing-section p,
+    .landing-section .lower-link{
+        top:1rem;
+    }
+    .landing-section h3 span:first-child{
+        font-size: 5rem;
+    }
+
+    .wellness-section .img-panel img{
+        max-height: none;
+        height: 35rem;
+    }
+
     form .input-grp {
         flex-basis: 100%;
     }
@@ -752,7 +1070,15 @@ form textarea {
         height: 15rem;
     }
 
+    form select{
+        font-size: 1.4rem;
+        border-radius: 10px;
+        padding: 1rem;
+        height :4rem;
+    }
+
     .accordion-section h3,
+    .testimonials-section h3,
     .sub-heading {
         width: 100%;
     }
@@ -763,6 +1089,15 @@ form textarea {
     }
 
     .points-container .point {
+        gap: 1rem;
+    }
+
+    .testimonials .card {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .testimonials .user-wrapper {
         gap: 1rem;
     }
 
