@@ -150,42 +150,27 @@ a {
 @media only screen and (max-width : 924px) {
   h1 {
     font-size: 6rem;
-    font-weight: 700;
   }
 
   h2 {
     font-size: 5rem;
-    font-weight: 500;
   }
 
   h3 {
     font-size: 4rem;
-    font-weight: 500;
-  }
-
-  h4 {
-    font-size: 2rem;
-    font-weight: 300;
   }
 
   .text-inter-sm {
-    font-size: 1.6rem;
     font-weight: 300;
   }
 
   .text-inter-lg {
-    font-size: 1.8rem;
     font-weight: 200;
   }
 
   .text-sm {
     font-size: 1.5rem;
     font-weight: normal;
-  }
-
-  .text-lg {
-    font-size: 1.8rem;
-    font-weight: 400;
   }
 
   .flex-section {
@@ -196,41 +181,29 @@ a {
 @media only screen and (max-width : 576px) {
   h1 {
     font-size: 4.5rem;
-    font-weight: 700;
   }
 
   h2 {
     font-size: 3rem;
-    font-weight: 500;
   }
 
   h3 {
     font-size: 2.5rem;
-    font-weight: 500;
   }
 
   h4 {
     font-size: 1.8rem;
-    font-weight: 300;
   }
 
   .text-inter-sm {
-    font-size: 1.6rem;
     font-weight: 300;
   }
 
   .text-inter-lg {
-    font-size: 1.8rem;
     font-weight: 200;
   }
 
-  .text-sm {
-    font-size: 1.5rem;
-    font-weight: normal;
-  }
-
   .text-lg {
-    font-size: 1.8rem;
     font-weight: 300;
   }
 
@@ -409,7 +382,7 @@ a {
 }
 
 .section-2 .cards-master {
-  max-height: 48rem;
+  max-height: 56rem;
   max-width: 100%;
   padding: 2rem;
   display: flex;
@@ -437,7 +410,7 @@ a {
 }
 
 .section-2 .card {
-  max-height: 23rem;
+  max-height: 27rem;
   max-width: 35rem;
   border-radius: 2rem;
   background: rgba(126, 134, 147, 0.1);
@@ -459,9 +432,9 @@ a {
   height: 5rem;
   width: 5rem;
   position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .section-2 .card h4,
@@ -477,7 +450,7 @@ a {
 }
 
 .section-3 .cards-container {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -597,13 +570,14 @@ a {
   border-radius: 10px;
   position: relative;
 }
-.points-container .img-container img{
+
+.points-container .img-container img {
   height: 4rem;
-  width : 4rem;
+  width: 4rem;
   position: absolute;
-  top : 50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -618,7 +592,6 @@ a {
   height: fit-content;
   position: absolute;
   top: -29rem;
-  /* left:-5rem; */
   left: 0%;
   z-index: 10;
   transform: rotate(-3deg);
@@ -629,7 +602,6 @@ a {
   height: fit-content;
   position: absolute;
   top: -26rem;
-  /* left : 15rem; */
   left: 40%;
   z-index: 20;
   transform: rotate(5deg) translate(-8rem, 4rem);
@@ -717,6 +689,12 @@ a {
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~accodrian-section styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.accordion-section{
+  min-height: 100vh;
+  width: 100%;
+  background: var(--Main-Primary);
+}
 
 /*accordion styles*/
 .accordion {
@@ -808,10 +786,12 @@ a {
   width: 9rem;
   margin-bottom: 1.5rem;
 }
-.footer .left-panel p{
+
+.footer .left-panel p {
   width: 100%;
   margin-bottom: 1.5rem;
 }
+
 .footer .left-panel .social-icon-wrapper {
   display: flex;
   flex-wrap: nowrap;
@@ -820,6 +800,7 @@ a {
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
+
 .footer .social-icon-wrapper span {
   background-color: #2d3034;
   height: 4rem;
@@ -829,9 +810,11 @@ a {
   padding-top: 0.5rem;
   cursor: pointer;
 }
+
 .footer .left-panel .social-icon-wrapper i {
   font-size: 3rem;
 }
+
 .footer .left-panel .social-icon-wrapper span:hover {
   background-color: var(--Primary-2);
 }
@@ -845,17 +828,20 @@ a {
   gap: 10%;
   color: var(--White);
 }
+
 .footer .right-panel a {
   color: var(--Secondary);
 }
+
 .footer .right-panel a:hover {
   color: var(--White);
 }
 
-.right-panel h4{
+.right-panel h4 {
   margin-bottom: 2rem;
 }
-.right-panel a{
+
+.right-panel a {
   display: block;
   margin-bottom: 1.5rem;
 }
@@ -868,21 +854,41 @@ a {
 
 .footer .container-bottom {
   min-height: 4rem;
-  text-align:center;
-  color:var(--White);
+  text-align: center;
+  color: var(--White);
   text-align: center;
   padding-top: 2rem;
-  line-height:1.5;
+  line-height: 1.5;
 }
 
 .footer .container-bottom a {
-  color:var(--Secondary);
+  color: var(--Secondary);
   text-decoration: underline;
 }
 
 /* ********************************************************************************
 ############################ Responsive Design (written on 1536 * 720)#################################
 ******************************************************************************** */
+
+@media only screen and (min-width : 1840px) {
+
+  section,
+  footer {
+    padding: 5rem 15%;
+  }
+
+  .header {
+    padding: 2.4rem 15%;
+  }
+
+  .dual-phones-section .phone-back {
+    left: 20%;
+  }
+
+  .dual-phones-section .phone-front {
+    left: 50%;
+  }
+}
 
 @media only screen and (max-width: 1280px) {
   .primary-button {
@@ -1192,6 +1198,7 @@ a {
     flex-basis: 50%;
     width: 50%;
   }
+
   /*order of sections*/
   .landing-section {
     order: 0;
@@ -1467,9 +1474,9 @@ a {
   }
 
   .footer .container-top .left-panel,
-  .footer .container-top .right-panel{
+  .footer .container-top .right-panel {
     flex-basis: 100%;
-    width : 100%;
+    width: 100%;
   }
 }
 

@@ -96,6 +96,7 @@ a {
     cursor: pointer;
 }
 
+/*end of smartphone design*/
 @media only screen and (max-width : 1080px) {
 
     section,
@@ -105,39 +106,29 @@ a {
 }
 
 @media only screen and (max-width : 924px) {
+    h1 {
+        font-size: 6rem;
+    }
+
     h2 {
         font-size: 5rem;
-        font-weight: 500;
     }
 
     h3 {
         font-size: 4rem;
-        font-weight: 500;
-    }
-
-    h4 {
-        font-size: 2rem;
-        font-weight: 300;
     }
 
     .text-inter-sm {
-        font-size: 1.6rem;
         font-weight: 300;
     }
 
     .text-inter-lg {
-        font-size: 1.8rem;
         font-weight: 200;
     }
 
     .text-sm {
         font-size: 1.5rem;
         font-weight: normal;
-    }
-
-    .text-lg {
-        font-size: 1.8rem;
-        font-weight: 400;
     }
 
     .flex-section {
@@ -146,38 +137,31 @@ a {
 }
 
 @media only screen and (max-width : 576px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+
     h2 {
         font-size: 3rem;
-        font-weight: 500;
     }
 
     h3 {
         font-size: 2.5rem;
-        font-weight: 500;
     }
 
     h4 {
         font-size: 1.8rem;
-        font-weight: 300;
     }
 
     .text-inter-sm {
-        font-size: 1.6rem;
         font-weight: 300;
     }
 
     .text-inter-lg {
-        font-size: 1.8rem;
         font-weight: 200;
     }
 
-    .text-sm {
-        font-size: 1.5rem;
-        font-weight: normal;
-    }
-
     .text-lg {
-        font-size: 1.8rem;
         font-weight: 300;
     }
 
@@ -250,7 +234,7 @@ a {
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~form-section styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-.form-panel{
+.form-panel {
     padding: 2rem;
     max-height: 100%;
     flex-basis: 60%;
@@ -258,7 +242,7 @@ a {
     color: var(--White);
 }
 
-.info-panel{
+.info-panel {
     max-height: 100%;
     flex-basis: 40%;
     width: 40%;
@@ -274,25 +258,25 @@ a {
     margin-bottom: 2rem;
 }
 
-form{
-    width : 100%;
+form {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap :2rem;
+    gap: 2rem;
 }
 
-form .input-grp{
+form .input-grp {
     flex-basis: calc((100% - 2rem)/2);
-    width : 50%;
+    width: 50%;
 }
 
-form .textarea-grp{
+form .textarea-grp {
     flex-basis: 100%;
-    width :100%;
+    width: 100%;
 }
 
-form button{
+form button {
     width: 18rem;
     padding: 2rem 1.8rem;
     border-radius: 5rem;
@@ -302,15 +286,15 @@ form button{
     cursor: pointer;
 }
 
-form label{
-    width : 100%;
+form label {
+    width: 100%;
     display: block;
     margin-bottom: 1rem;
 }
 
-form input{
-    width : 100%;
-    height:5rem;
+form input {
+    width: 100%;
+    height: 5rem;
     border-radius: 5rem;
     border: none;
     padding-left: 2rem;
@@ -320,13 +304,13 @@ form input{
 }
 
 form input::placeholder,
-form textarea::placeholder{
+form textarea::placeholder {
     color: var(--White);
 }
 
-form textarea{
-    width : 100%;
-    height : 20rem;
+form textarea {
+    width: 100%;
+    height: 20rem;
     border-radius: 2rem;
     border: none;
     padding: 2rem;
@@ -335,6 +319,7 @@ form textarea{
     color: var(--White);
     resize: none;
 }
+
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~common styles ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -604,6 +589,24 @@ form textarea{
 /* ********************************************************************************
   ############################ Responsive Design (written on 1536 * 720)#################################
   ******************************************************************************** */
+@media only screen and (min-width : 1840px) {
+    section,
+    footer {
+        padding: 5rem 15%;
+    }
+
+    .header {
+        padding: 2.4rem 15%;
+    }
+
+    .dual-phones-section .phone-back {
+        left: 20%;
+    }
+
+    .dual-phones-section .phone-front {
+        left: 50%;
+    }
+}
 
 @media only screen and (max-width: 1280px) {
     .primary-button {
@@ -631,8 +634,8 @@ form textarea{
     }
 
     .text-panel,
-    .img-panel ,
-    .form-panel{
+    .img-panel,
+    .form-panel {
         padding: 0rem 1rem;
     }
 
@@ -703,23 +706,24 @@ form textarea{
         min-height: 100vh;
     }
 
-    .text-panel ,
-    .info-panel{
+    .text-panel,
+    .info-panel {
         flex-basis: 100%;
         width: 100%;
         padding: 0;
     }
 
-    .img-panel{
+    .img-panel {
         flex-basis: 100%;
         width: 100%;
         margin: 2rem 0rem;
     }
-    .form-panel{
+
+    .form-panel {
         flex-basis: 100%;
         width: 100%;
         margin: 5rem 0rem;
-        
+
     }
 
     .accordion {
@@ -734,20 +738,23 @@ form textarea{
 
 /*mobile screens*/
 @media only screen and (max-width : 576px) {
-    form  .input-grp{
+    form .input-grp {
         flex-basis: 100%;
     }
-    form button{
-        width : 14rem;
-        padding : 1rem .5rem;
+
+    form button {
+        width: 14rem;
+        padding: 1rem .5rem;
         font-size: 1.4rem;
     }
-    form input{
+
+    form input {
         font-size: 1.4rem;
         height: 4rem;
         border-radius: 4rem;
     }
-    form textarea{
+
+    form textarea {
         font-size: 1.4rem;
         border-radius: 1.5rem;
         padding: 1rem;
