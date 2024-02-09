@@ -3,6 +3,7 @@ layout 1 : > 924px;
 layout 2 : <= 924px
 layout 3 : <= 576px
 */
+/* background: radial-gradient(circle at top right, rgba(6,186,99,1) 0%, rgba(12,32,39,1) 29%, rgba(12,32,39,1) 97%); */
 
 :root {
   --Main-Primary: #0c2027;
@@ -137,8 +138,34 @@ a {
   top: 3px;
   left: 43%;
 }
-
 /*end of smartphone design*/
+.decoration{
+  position: absolute;
+  height: 30rem;
+  width :30rem;
+  border-radius: 50%;
+  background-color: rgba(33, 243, 64, 0.09);
+  /* box-shadow: 10px 13px 126px 65px rgba(45,55,53,0.8); */
+  box-shadow: 10px 10px 89px 100px rgba(33,243,64,0.1);
+  z-index: 0;
+}
+section{
+  position: relative;
+  overflow-y: visible;
+}
+.section-2 .decoration{
+  right : 5rem;
+  top : 10rem;
+}
+.section-3 .decoration{
+  left : -5rem;
+  bottom : -20rem;
+}
+.about-section .decoration{
+  top : -20rem;
+  left:-5rem;
+}
+
 @media only screen and (max-width : 1080px) {
 
   section,
