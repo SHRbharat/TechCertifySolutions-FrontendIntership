@@ -495,7 +495,7 @@ section {
 }
 
 .points-container .img-container img {
-    height: 4rem;
+    height: 3rem;
     width: 4rem;
     position: absolute;
     top: 50%;
@@ -577,12 +577,16 @@ form select{
     color: var(--White);
 }
 
-.dropdown-grp option{
+.form-panel .dropdown-grp select option {
+    background-color:#7e8693;
+    color: #000;
     width : 100%;
 }
-/* form select{
-    background-position: right 10px center;
-} */
+
+.form-panel .dropdown-grp select option:hover {
+    background-color: var(--Main-Primary);
+    color: var(--White);
+}
 
 form input::placeholder,
 form textarea::placeholder {
