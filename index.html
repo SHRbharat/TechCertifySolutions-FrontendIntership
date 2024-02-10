@@ -17,6 +17,15 @@
         </ul>
     </ol>
 
+    <hr>
+    units in pixel (px) <br>
+    <p>inner width : <span class="in-wid">0</span></p>
+    <p>outer width : <span class="out-wid">0</span></p>
+    <p>inner height : <span class="in-hei">0</span></p>
+    <p>outer height : <span class="out-hei">0</span></p>
+
+    <p>visible viewport <h3>0</h3></p>
+	<p>device pixel ratio : <span class="dpi">0</span></p>
     <!-- <div class="decoration"></div> -->
     <script>
         // Select all <a> tags and set the target attribute to "_blank"
@@ -24,6 +33,20 @@
         aTags.forEach(function(aTag) {
             aTag.setAttribute('target', '_blank');
         });
+
+        function resolution() {
+		//console.log(window.innerHeight);
+        document.querySelector(".in-wid").innerHTML = window.innerWidth;
+        document.querySelector(".out-wid").innerHTML = window.outerWidth;
+        document.querySelector(".in-hei").innerHTML = window.innerHeight;
+        document.querySelector(".out-hei").innerHTML = window.outerHeight;
+
+        document.querySelector("h3").innerHTML = window.innerWidth + " X " + window.innerHeight;
+		document.querySelector(".dpi").innerHTML = window.devicePixelRatio;
+      }
+
+	  resolution();
+	  window.addEventListener('resize',resolution);
     </script>
 </body>
 </html>
