@@ -951,7 +951,7 @@ section {
 
     /*landing section styles*/
     .landing-section {
-        min-height: calc(100vh-8rem);
+        min-height: calc(100vh - 8rem);
     }
 
     /*section-2 styles*/
@@ -1051,7 +1051,12 @@ section {
 }
 /*mobile screens*/
 @media only screen and (max-width : 576px) {
-
+    .landing-section{
+        margin-top: 7rem;
+        background-size: 190%;
+        min-height:unset;
+        height: 60vh;
+    }
     /*section-2 styles*/
     .section-2 h3,
     .feature-list-section h3,
