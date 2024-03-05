@@ -1,0 +1,320 @@
+:root{
+    --main-primary : #dfdfdf;
+    --main-secondary : #f98bfb;
+    --text-main : #0b0b0b;
+    --text-secondary : #534f4f;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height :100%;
+    width : 100%;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.text-nav{
+    font-size: 2rem;
+    color: var(--text-main);
+}
+
+header{
+    height : 10rem;
+    width : 100%;
+    position: fixed;
+    top:0;
+    transition: top .5s;
+    background-color: var(--main-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    z-index : 10;
+}
+
+header .logo-container{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo-container img{
+    height: 7rem;
+    width : 7rem;
+}
+
+header .logo-container .menu-switch{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    display: none;
+}
+
+.line{
+    height: 0.5rem;
+    width : 5rem;
+    background-color: var(--text-main);
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 2rem;
+}
+
+.menu nav li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 2rem;
+}
+
+.menu .search-bar{
+    position: relative;
+}
+
+.menu .search-bar input{
+    width : 25rem;
+    height: 4rem;
+    border: 2px solid var(--text-main);
+    border-radius: 2rem;
+    padding-left:2rem;
+    padding-right: 4rem;
+}
+
+.menu .search-bar input::placeholder{
+    color: var(--text-main);
+    font-size: 1.7rem;
+}
+
+.search-btn{
+    position: absolute;
+    top:0;
+    right:0;
+    height: 4rem;
+    border: none;
+    border-radius: 0 2rem 2rem 0;
+    width : 3.8rem;
+    background-color: var(--text-main);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search-btn i{
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.mode-switch{
+    height: 7rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mode-switch i{
+    font-size: 2.5rem;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.mode-switch i:last-child{
+    display: none;
+}
+
+.mode-switch.mode-change i:first-child{
+    display: none;
+}
+
+.mode-switch.mode-change i:last-child{
+    display: block;
+}
+
+.seperator{
+    height:10rem;
+    width:100%;
+    background-color: var(--main-primary);
+}
+
+main{
+    width : 100%;
+    height : 100%;
+}
+
+.landing-section{
+    height : 120vh;
+    width : 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.landing-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.landing-section .content{
+    position: absolute;
+    width : 80%;
+    top : 17rem;
+    left:50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.landing-section h1{
+    position: relative;
+    font-size: 10rem;
+    color: #fff;
+}
+
+.landing-section h3{
+    position: relative;
+    font-size: 4rem;
+    color: #fff; 
+
+}
+
+.landing-section i{
+    position: relative;
+    font-size: 4rem;
+    color: #fff;
+   
+}
+
+.my-stories{
+    min-height: 100vh;
+    width : 100%;
+    background-color: var(--main-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap : 2rem;
+    padding: 10rem;
+}
+
+.my-stories h2{
+    font-size: 5rem;
+    color: var(--text-main);
+}
+
+.hr{
+    width: 100%;
+    height: 1px;
+    background-color:var(--text-main);
+}
+
+.my-stories .cards-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap : 4rem;
+}
+
+.card{
+    flex-basis: 30%;
+    width: 30%;
+    height: 70rem;
+    padding: 1rem;
+    /* box-shadow: 0 1px 2px #534f4f; */
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    color: var(--text-main);
+}
+
+.card:hover{
+    color: var(--text-secondary);
+}
+
+.card img{
+    height : 40rem;
+    width : 100%; 
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.card .info{
+    width: 100%;
+    height: 2rem;
+    font-size: 1.2rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.card .info span{
+    position: absolute;
+    top : 0;
+    left :2px;
+}
+
+.card .info i{
+    font-size: 1.8rem;
+    position: absolute;
+    top : 0;
+    right : 2px;
+}
+
+.card .content{
+    width : 100%;
+    max-height : 20rem;
+}
+
+.card .content h4{
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+
+.card .content p{
+    width: 100%;
+    font-size: 1.5rem;
+    text-overflow: ellipsis;
+}
+
+.card .hr-card{
+    position: absolute;
+    height: .5px;
+    background-color: var(--text-secondary);
+    width: 100%;
+    bottom:3rem;
+}
+
+.card .social{
+    position: absolute;
+    font-size: 1.4rem;
+    height: 2rem;
+    width: 100%;
+    bottom: 0;
+}
+
+
+
