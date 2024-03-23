@@ -1,6 +1,7 @@
 :root{
     --main-primary : #dfdfdf;
-    --main-secondary : #f98bfb;
+    --main-secondary : #301231;
+    --main-secondary-faded : #bcafbd;
     --text-main : #0b0b0b;
     --text-secondary : #534f4f;
 }
@@ -26,6 +27,10 @@ body{
 a{
     text-decoration: none;
     color: inherit;
+}
+
+button , i{
+    cursor: pointer;
 }
 
 .text-nav{
@@ -317,13 +322,15 @@ main{
 }
 
 /* about section  */
-.about h2{
+.about h2,
+.podcasts h2{
     font-size: 5rem;
     color: var(--text-main);
 }
 
-.about{
-    min-height: 100vh;
+.about,
+.podcasts{
+    height: fit-content;
     width : 100%;
     background-color: var(--main-primary);
     display: flex;
@@ -334,21 +341,55 @@ main{
     padding: 10rem;
 }
 
-.about .panel-container{
+.panel-container{
     width : 90%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    padding: 5rem;
 }
 
-.about .panel-container .text-panel{
-    flex-basis: 40%;
-
-}
-
-.about .panel-container .graphics-panel{
+.panel-container .text-panel{
     flex-basis: 50%;
+    position: relative;
+    overflow: visible;
+}
+
+.text-panel h3{
+    font-size: 4rem;
+    color: var(--text-main);
+    width: 100%;
+    
+}
+
+.text-panel p{
+    font-size: 1.8rem;
+    color: var(--text-secondary);
+    width: 100%;
+    position: relative;
+    top:2rem;
+}
+
+.text-panel button{
+    height: 4rem;
+    width : 16rem;
+    border: 1px solid var(--text-main);
+    background:transparent;
+    font-size: 1.6rem;
+    color: var(--text-main);
+    position: relative;
+    top:4rem;
+    transition: all 0.3s ;
+}
+
+.text-panel button:hover{
+    background-color: var(--main-secondary);
+    color: var(--main-primary);
+}
+
+.panel-container .graphics-panel{
+    flex-basis: 45%;
     width:50%;
     height: 100%;
     display: flex;
@@ -360,7 +401,6 @@ main{
     height: 40rem;
     width : 30rem;
     overflow:hidden;
-    background-color: red;
     border: none;
     border-radius: 50% 50% 0 0;
     background: url("about.jpg");
@@ -369,3 +409,90 @@ main{
     background-size: cover;
 }
 
+/* podcasts section */
+
+.podcasts img{
+    max-height: 80%;
+    max-width: 80%;
+}
+
+.podcasts .text-panel div{
+    width: 100%;
+    position: relative;
+    top:6rem;
+}
+
+.podcasts .text-panel div i{
+    font-size: 2.5rem;
+    color: var(--text-main);
+}
+
+.podcasts .text-panel div i:nth-child(2){
+    position: relative;
+    left : 3rem;
+}
+
+/*subscription section*/
+.subscription h3{
+    font-size: 5rem;
+    color: var(--text-main);
+}
+
+.subscription{
+    height: fit-content;
+    width : 100%;
+    background-color: var(--main-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap : 10rem;
+    padding: 10rem;
+}
+
+.subscription .input-wrapper{
+    position: relative;
+    overflow: visible;
+}
+
+.subscription .input-wrapper .label{
+    font-size: 1.6rem;
+    color: var(--text-secondary);
+    position: relative;
+    left : 2rem;
+}
+
+.subscription .input-wrapper input{
+    height: 6rem;
+    width : 60rem;
+    position: relative;
+    top: 1.5rem;
+    padding: 2rem;
+    background-color: var(--main-primary);
+    border: 1px solid var(--text-main);
+    color: var(--text-secondary);
+    transition: all .3s;
+}
+
+.subscription .input-wrapper button{
+    height: 6rem;
+    width : 25rem;
+    position: relative;
+    top:1.77rem;
+    left : -1rem;
+    border : 1px solid var(--text-main);
+    background-color: var(--main-secondary);
+    color: var(--main-primary);
+    font-size: 2rem;
+    transition: all .3s;
+}
+
+.subscription .input-wrapper input:hover{
+    background-color: #fff;
+    color: var(--text-main);
+}
+
+.subscription .input-wrapper button:hover{
+    background-color: var(--main-secondary-faded);
+    color: var(--text-main);
+}
