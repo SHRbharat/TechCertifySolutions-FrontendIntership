@@ -496,3 +496,116 @@ main{
     background-color: var(--main-secondary-faded);
     color: var(--text-main);
 }
+
+/* contact section  */
+.contact{
+    height : fit-content;
+    width: 100%;
+    background-color: var(--main-secondary-faded);
+    padding: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact .content-left{
+    flex-basis: 40%;
+    width:40%;
+    height: 30rem;
+    position: relative;
+}
+
+.contact .content-left h2{
+    font-size: 6rem;
+    font-weight: 100;
+    position: absolute;
+    top:0;
+}
+
+.contact .content-left div{
+    position: absolute;
+    bottom:0;
+}
+
+.contact .content-left i{
+    font-size: 3rem;
+    margin-right: 2rem;
+}
+
+.contact-form{
+    flex-basis: 40%;
+    width: 40%;
+    height:30rem;
+}
+
+.contact-form form{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem;
+}
+
+.contact-form .input-grp{
+    font-size: 1.6rem;
+    color: var(--text-secondary);
+}
+.contact-form input{
+    border: none;
+    border-bottom: 1px solid var(--text-main);
+    width : 100%;
+    height:2.8rem;
+    background-color: transparent;
+}
+.contact-form input:focus{
+    border-bottom-width: 2px;
+}
+
+.contact-form textarea{
+    resize: none;
+    min-height: 8rem;
+    width:100%;
+    border: none;
+    border-bottom: 1px solid var(--text-main);
+    background-color: transparent;
+}
+
+.contact-form .input-grp:nth-of-type(-n+2){
+    flex-basis: 45%;
+    flex-grow: 1;
+}
+.contact-form .input-grp:nth-last-child(-n+3){
+    flex-basis: 100%;
+}
+
+.contact-form button{
+    height: 4rem;
+    width : 15rem;
+    font-size: 1.6rem;
+    color: var(--text-main);
+    border: 1px solid var(--text-main);
+    background-color: transparent;
+    transition: all .3s;
+}
+.contact-form button:hover{
+    background-color: var(--main-secondary);
+    color: #fff;
+}
+
+footer{
+    background-color: var(--main-secondary);
+    width: 100%;
+    height : 8rem;
+    position: relative;
+}
+
+footer p{
+    font-size: 1.8rem;
+    font-weight: 100;
+    color: #fff;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
